@@ -1,0 +1,12 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: my-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+    ports:
+      - "3306:3306"
+    volumes:
+      - /Users/min/Desktop/mysqldata:/var/lib/mysql  # Store MySQL data locally
